@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="simpleApp">
+<head>
+<meta charset="UTF-8">
+	<link href="css/bootstrap-3.3.4-dist/css/bootstrap.css" rel="stylesheet">
+	<script src="js/angular.min.js"></script>
+	<script src="js/controller2.js"></script>
+</head>
+
+<body ng-controller="VariableRateCtrl">
+<div class="container-fluid">
+
+	<div class="row>">
+		<div class="col-sm-12">
+			<h2>Counter example using $interval: variable rate</h2>
+                        <p>Example using AngularJS $interval to create a counter that increments at variable
+                            rates selected from the values in the dropdown list.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-6">
+			<p>{{counter}}</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-6">
+			<p>Update rate:
+				<select ng-model="updateRate" ng-change="changeRate()" >
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+				</select>
+			</p>
+			<p><button class="btn" data-ng-click="start()"><span class="glyphicon glyphicon-play" aria-hidden="true"></span>Start</button><p>
+			<p><button class="btn" data-ng-click="stop()"><span class="glyphicon glyphicon-pause" aria-hidden="true"></span>Pause</button> State: {{state}}<p>
+		</div>
+	</div>
+
+
+</div>
+</body>
+</html>
